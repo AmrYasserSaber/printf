@@ -15,32 +15,36 @@
  * This value will be updated to the last index read by this function.
  * Return: The flags as a bitfield (see the F_* macros in main.h).
  */
+
 int get_flags(const char *format, int *index)
 {
-int flags = 0;
+	int flags = 0;
 
-const char *flags_str = "+0# -";
+	const char *flags_str = "+0# -";
 
-const int flags_val[] = {F_Positive, F_ZERO, F_HASHED, F_SPACE, F_Negative};
+	const int flags_val[] = {F_Positive, F_ZERO, F_HASHED, F_SPACE, F_Negative};
 
-int i, j;
+	int i, j;
 
-for (i = *index + 1; format[i] != '\0'; i++)
-{
-int b = (int)sizeof(flags_str);
-for (j = 0; j < b ; j++)
-{
-char current_format_letter = format[i];
-char current_flag = flags_str[j];
-if (current_format_letter == current_flag)
-{
-flags |= flags_val[j];
-break;
-}
-}
-if (j == sizeof(flags_str))
-break;
-}
-*index = i - 1;
-return (flags);
+	for (i = *index + 1; format[i] != '\0'; i++)
+	{
+		int b = (int)sizeof(flags_str);
+
+		for (j = 0; j < b ; j++)
+		{
+			char current_format_letter = format[i];
+			char current_flag = flags_str[j];
+
+			if (current_format_letter == current_flag)
+			{
+				flags |= flags_val[j];
+				break;
+			}
+		}
+		if (j == sizeof(flags_str))
+			break;
+	}
+
+	*index = i - 1;
+	return (flags);
 }
