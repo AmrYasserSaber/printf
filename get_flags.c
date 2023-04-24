@@ -22,7 +22,7 @@ int get_flags(const char *format, int *index)
 
 	const char *flags_str = "+0# -";
 
-	const int flags_val[] = {F_Positive, F_ZERO, F_HASHED, F_SPACE, F_Negative};
+	const int flags_val[] = {F_PLUS, F_ZERO, F_HASH, F_SPACE, F_MINUS};
 
 	int i, j;
 
