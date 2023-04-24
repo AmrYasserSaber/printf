@@ -1,44 +1,46 @@
 #include "main.h"
 
 /**
- * Calculates the active flags in a given format string.
+ * get_flags - Calculates the active flags in a given format string.
  *
  * The following flags are supported:
- *   - '+'  always print a sign (+ or -) for signed conversions
- *   - '0'  pad with zeros instead of spaces
- *   - '#'  use an alternative form for the conversion (e.g., 0x prefix for hex)
- *   - ' '  print a space before a positive number (ignored if '+' flag is present)
- *   - '-'  left-justify the argument within the field width
+ * - '+' always print a sign (+ or -) for signed conversions
+ * - '0' pad with zeros instead of spaces
+ * - '#' use an alternative form for the conversion (e.g., 0x prefix for hex)
+ * - ' ' print a space before a positive number (ignored if '+'flag is present)
+ * - '-' left-justify the argument within the field width
  *
- * @param format The format string that wanted to count the flages in.
- * @param index  the current index in the format string (pointer).
- *               This value will be updated to the last index read by this function.
- * @return The flags as a bitfield (see the F_* macros in main.h).
+ * @format:The format string that wanted to count the flages in.
+ * @index: the current index in the format string (pointer).
+ * This value will be updated to the last index read by this function.
+ * Return: The flags as a bitfield (see the F_* macros in main.h).
  */
 int get_flags(const char *format, int *index)
 {
-    int flags = 0;
-    const char *flags_str = "+0# -";
-    const int flags_val[] = {F_Positive, F_ZERO, F_HASHED, F_SPACE, F_Negative};
-    int i, j;
+int flags = 0;
 
-    for (i = *index + 1; format[i] != '\0'; i++)
-    {
-        int b=(int)sizeof(flags_str);
-        for (j = 0; j < b ; j++)
-        {
-            char x=format[i];
-            char y=flags_str[j];
-            if (x == y)
-            {
-                flags |= flags_val[j];
-                break;
-            }
-        }
-        if (j == sizeof(flags_str))
-            break;
-    }
+const char *flags_str = "+0# -";
 
-    *index = i - 1;
-    return flags;
+const int flags_val[] = {F_Positive, F_ZERO, F_HASHED, F_SPACE, F_Negative};
+
+int i, j;
+
+for (i = *index + 1; format[i] != '\0'; i++)
+{
+int b = (int)sizeof(flags_str);
+for (j = 0; j < b ; j++)
+{
+char current_format_letter = format[i];
+char current_flag = flags_str[j];
+if (current_format_letter == current_flag)
+{
+flags |= flags_val[j];
+break;
+}
+}
+if (j == sizeof(flags_str))
+break;
+}
+*index = i - 1;
+return (flags);
 }
