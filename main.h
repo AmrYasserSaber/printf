@@ -41,8 +41,7 @@ va_list list, char buffer[],
 int flags, int width, int precision, int size);
 
 /* Functions to print chars and strings */
-int print_percent(va_list types, char buffer[],
-int flags, int width, int precision, int size);
+int print_percent(void);
 
 int print_string(va_list types, char buffer[],
 int flags, int width, int precision, int size);
@@ -57,8 +56,7 @@ int flags, int width, int precision, int size);
 int print_hexadecimal(va_list types, char buffer[],
 int flags, int width, int precision, int size);
 
-int print_binary(va_list types, char buffer[],
-int flags, int width, int precision, int size);
+int print_binary(va_list our_types);
 
 int print_octal(va_list types, char buffer[],
 int flags, int width, int precision, int size);
@@ -115,3 +113,4 @@ char buffer[],
 int flags, int width, int precision, int size);
 
 
+#endif
