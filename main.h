@@ -41,7 +41,8 @@ va_list list, char buffer[],
 int flags, int width, int precision, int size);
 
 /* Functions to print chars and strings */
-int print_percent(void);
+int print_percent(va_list our_types, char *buffer,
+	int flags, int width, int precision, int size);
 
 int print_string(va_list types, char buffer[],
 int flags, int width, int precision, int size);
