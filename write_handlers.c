@@ -201,9 +201,11 @@ int write_unsgnd(unsigned int num, char buffer[],
 int write_pointer(void *arg, char buffer[],
 		int flags, int width, int precision, int size)
 {
-	uintptr_t ptrval = (uintptr_t)arg;
 	int len = snprintf(NULL, 0, "%p", arg);
-
+	int i = 0;
+	uintptr_t ptrval = (uintptr_t)arg;
+	(void) size;
+	(void) precision;
 	if (len < 0)
 	{
 		return (0);
@@ -219,7 +221,7 @@ int write_pointer(void *arg, char buffer[],
 
 	if (!(flags & F_MINUS))
 	{
-		for (int i = 0; i < pad_count; i++)
+		for (i = 0; i < pad_count; i++)
 		{
 			buffer[idx++] = pad_char;
 		}
@@ -229,7 +231,7 @@ int write_pointer(void *arg, char buffer[],
 	snprintf(buffer + idx, len + 1, "%p", arg);
 	if (flags & F_MINUS)
 	{
-		for (int i = 0; i < pad_count; i++)
+		for (i = 0; i < pad_count; i++)
 		{
 			buffer[idx + len + i] = pad_char;
 		}
