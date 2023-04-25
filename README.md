@@ -44,7 +44,7 @@ MIT Licence.
 
 
 ---
-Resource Helped us to implement this function
+# Resource
 
 - [Secrets of “printf ”](Resource_one.pdf)
 - [open Genus](https://iq.opengenus.org/how-printf-and-scanf-function-works-in-c-internally/);
