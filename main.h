@@ -57,7 +57,8 @@ int flags, int width, int precision, int size);
 int print_hexadecimal(va_list types, char buffer[],
 int flags, int width, int precision, int size);
 
-int print_binary(va_list our_types);
+int print_binary(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
 
 int print_octal(va_list types, char buffer[],
 int flags, int width, int precision, int size);
