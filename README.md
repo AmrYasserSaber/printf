@@ -40,6 +40,4 @@ This will create an executable program called `my_program` that can be run from 
 
 Contributions to this project are welcome! Please create a pull request with any changes or additions you would like to make.
 
-## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
