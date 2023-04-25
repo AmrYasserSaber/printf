@@ -31,7 +31,7 @@ This will output `Hello, world!` to the console.
 To compile the `printf` function, simply include all of the source files in your build process. For example:
 
 ```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o my_program
 ```
 
 This will create an executable program called `my_program` that can be run from the command line.
