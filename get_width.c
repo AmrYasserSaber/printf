@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_width-Calculates the width for 
+ * get_width-Calculates the width for
  * printing based on the given format string.
  *
  * The width can be specified in one of two ways:
