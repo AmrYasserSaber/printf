@@ -13,7 +13,8 @@
  *
  * Return: Number of characters printed.
  *
- * This function is part of print_functions.c, which contains functions to print various types,
+ * This function is part of print_functions.c, which contains functions to
+ *  print various types,
  * including char, string, int, and binary.
  */
 
