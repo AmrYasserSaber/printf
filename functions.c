@@ -172,7 +172,6 @@ int print_int(va_list our_types, char buffer[],
  * @size: Size specifier from it.
  * Return: Number of chars printed
  */
- */
 
 /**********This function use to print the binary.*************/
 
@@ -190,7 +189,7 @@ int print_binary(va_list types, char buffer[],
 	UNUSED(size);
 
 	n = va_arg(types, unsigned int);
-	m = 2147483648; /* (2 ^ 31) */
+	m = 2147483648u; /* (2 ^ 31) */
 	a[0] = n / m;
 	for (i = 1; i < 32; i++)
 	{
