@@ -1,22 +1,21 @@
 #include "main.h"
 
+
 /**
- * print_char - function that print the char
- * @our_types: the list of argument I use to get our_types
- * @buffer: Buffer array to handle print
- * @flags:  flags to get calculation
- * @width: the Width of string.
- * @precision: our precision calculation.
- * @size: the Size we use.
- * Return: n. of char.
+ * print_char - Print a single character.
+ *
+ * @our_types: The list of argument types.
+ * @our_buffer: Buffer to hold the printed string.
+ * @flag: Flags to determine how the output should be formatted.
+ * @widths: Width of the printed string.
+ * @precisions: Precision of the printed string.
+ * @our_size: Size of the printed string.
+ *
+ * Return: Number of characters printed.
+ *
+ * This function is part of print_functions.c, which contains functions to print various types,
+ * including char, string, int, and binary.
  */
-/**
- * This file is used to print the:
- * char 
- * string 
- * int 
- * binary
-*/
 
 /**********This function use to print the char.*************/
 
@@ -164,7 +163,7 @@ int print_int(va_list our_types, char buffer[],
 
 /**
  * print_binary - Prints an unsigned number
- * @our_types: Lista of arguments
+ * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width from it.
