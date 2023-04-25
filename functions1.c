@@ -122,8 +122,10 @@ int print_hexa_upper(va_list our_types, char our_buffer[],
 /**
  * print_hexa -- Prints an unsigned number from our passed function
  * @our_types: List a of arguments
+ * @map_to: array
  * @our_buffer: Buffer array to handle print
  * @flags:  Calculates active flags that is used in it.
+ * @flag_ch: a flage of char
  * @width: get width
  * @our_precision: our_Precision specification used.
  * @size: Size specifier one used.

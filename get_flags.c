@@ -7,7 +7,7 @@
  * - '+' always print a sign (+ or -) for signed conversions
  * - '0' pad with zeros instead of spaces
  * - '#' use an alternative form for the conversion (e.g., 0x prefix for hex)
- * - ' ' print a space before a positive number (ignored if '+'flag is present)
+ * - ' ' print a space before a positive number(ignored if '+'flag is present)
  * - '-' left-justify the argument within the field width
  *
  * @format:The format string that wanted to count the flages in.
