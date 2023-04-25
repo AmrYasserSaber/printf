@@ -15,7 +15,7 @@ This is a C language implementation of the `printf` function. It provides functi
 
 To use the `printf` function, include the `main.h` header file and call the `printf` function with a format string and any required arguments. For example:
 
-```
+```c
 #include "main.h"
 
 int main() {
@@ -30,8 +30,8 @@ This will output `Hello, world!` to the console.
 
 To compile the `printf` function, simply include all of the source files in your build process. For example:
 
-```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o my_program
+```sh
+    gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o my_program
 ```
 
 This will create an executable program called `my_program` that can be run from the command line.
@@ -40,4 +40,11 @@ This will create an executable program called `my_program` that can be run from 
 
 Contributions to this project are welcome! Please create a pull request with any changes or additions you would like to make.
 
+MIT Licence.
 
+
+---
+Resource Helped us to implement this function
+
+- [Secrets of “printf ”](Resource_one.pdf)
+- [open Genus](https://iq.opengenus.org/how-printf-and-scanf-function-works-in-c-internally/);

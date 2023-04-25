@@ -1,0 +1,5 @@
+printf.c_
+functions.c
+functions1.c
+get_size.c
+get_precision.c
