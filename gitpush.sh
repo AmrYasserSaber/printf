@@ -1,4 +1,4 @@
 #!/bin/bash
 git add *
-git commit -m "add functions2.c after checking it"
+git commit -m "fix betty on functions2.c"
 git push 
