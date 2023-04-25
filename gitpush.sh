@@ -1,4 +1,4 @@
 #!/bin/bash
 git add *
-git commit -m "get size file upload & fix betty error & fix some logic on it."
+git commit -m "Some changes in printf.c file"
 git push 
