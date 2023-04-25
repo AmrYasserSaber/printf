@@ -1,4 +1,4 @@
 #!/bin/bash
 git add *
-git commit -m "fix betty on functions2.c"
+git commit -m "fix issues ini get precision file"
 git push 
